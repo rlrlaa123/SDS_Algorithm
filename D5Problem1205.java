@@ -37,11 +37,11 @@ public class Problem1205 {
 			System.out.println(data.indexOf(score)+1);
 		}
 		
-//		//Á¶°Ç¹®0.NÀÌ 0ÀÏ °æ¿ì
+//		//ì¡°ê±´ë¬¸0.Nì´ 0ì¼ ê²½ìš°
 //		if (N == 0) {
 //			System.out.println(1);
 //		}
-//		//Á¶°Ç¹®1.Áßº¹Á¡¼öÀÏ °æ¿ì
+//		//ì¡°ê±´ë¬¸1.ì¤‘ë³µì ìˆ˜ì¼ ê²½ìš°
 //		else if (containsScore(data, score)) {
 //			data.add(new Score(0, score));
 //			Collections.sort(data, Collections.reverseOrder());
@@ -49,25 +49,25 @@ public class Problem1205 {
 //			
 //			
 //			int firstIndexOfScore = getFirstIndexOfScore(data, score);
-//			//Á¶°Ç¹®2.¼øÀ§±Ç¿¡ µéÁö ¸øÇÒ °æ¿ì
+//			//ì¡°ê±´ë¬¸2.ìˆœìœ„ê¶Œì— ë“¤ì§€ ëª»í•  ê²½ìš°
 //			if (firstIndexOfScore >= P) {
 //				System.out.println(-1);
 //			}
-//			//Á¶°Ç¹®2.¼øÀ§±Ç¿¡ µé¾úÀ» °æ¿ì
+//			//ì¡°ê±´ë¬¸2.ìˆœìœ„ê¶Œì— ë“¤ì—ˆì„ ê²½ìš°
 //			else {
-//				//Á¶°Ç¹®3.1µî ÀÏ ¶§,
+//				//ì¡°ê±´ë¬¸3.1ë“± ì¼ ë•Œ,
 //				if (firstIndexOfScore == 0) {
 //					System.out.println(1);
 //				}
-//				//Á¶°Ç¹®3.1µîÀÌ ¾Æ´Ò ¶§,
+//				//ì¡°ê±´ë¬¸3.1ë“±ì´ ì•„ë‹ ë•Œ,
 //				else {
 //					int rankCounter = 1;
 //					for (int i = 1; i < data.size(); i++) {
-//						//Á¶°Ç¹®4.Áßº¹ ¼øÀ§°¡ ÀÖÀ» °æ¿ì
+//						//ì¡°ê±´ë¬¸4.ì¤‘ë³µ ìˆœìœ„ê°€ ìˆì„ ê²½ìš°
 //						if (data.get(i-1).score == data.get(i).score) {
 //							data.get(i).setRank(rankCounter);
 //						}
-//						//Á¶°Ç¹®4.Áßº¹ ¼øÀ§°¡ ¾øÀ» °æ¿ì
+//						//ì¡°ê±´ë¬¸4.ì¤‘ë³µ ìˆœìœ„ê°€ ì—†ì„ ê²½ìš°
 //						else {
 //							rankCounter+=1;
 //							data.get(i).setRank(rankCounter);
@@ -78,31 +78,31 @@ public class Problem1205 {
 //				}
 //			}
 //		}
-//		//Á¶°Ç¹®1.Áßº¹Á¡¼ö°¡ ¾Æ´Ò °æ¿ì
+//		//ì¡°ê±´ë¬¸1.ì¤‘ë³µì ìˆ˜ê°€ ì•„ë‹ ê²½ìš°
 //		else {
 //			data.add(new Score(0, score));
 //			Collections.sort(data);
 //			
 //			int firstIndexOfScore = getFirstIndexOfScore(data, score);
-//			//Á¶°Ç¹®2.¼øÀ§±Ç¿¡ µéÁö ¸øÇÒ °æ¿ì
+//			//ì¡°ê±´ë¬¸2.ìˆœìœ„ê¶Œì— ë“¤ì§€ ëª»í•  ê²½ìš°
 //			if (firstIndexOfScore >= P) {
 //				System.out.println(-1);
 //			}			
-//			//Á¶°Ç¹®2.¼øÀ§±Ç¿¡ µé¾úÀ» °æ¿ì
+//			//ì¡°ê±´ë¬¸2.ìˆœìœ„ê¶Œì— ë“¤ì—ˆì„ ê²½ìš°
 //			else {
-//				//Á¶°Ç¹®3.1µî ÀÏ ¶§,
+//				//ì¡°ê±´ë¬¸3.1ë“± ì¼ ë•Œ,
 //				if (firstIndexOfScore == 0){
 //					System.out.println(1);
 //				}
-//				//Á¶°Ç¹®3.1µîÀÌ ¾Æ´Ò ¶§,
+//				//ì¡°ê±´ë¬¸3.1ë“±ì´ ì•„ë‹ ë•Œ,
 //				else {
 //					int rankCounter = 1;
 //					for (int i = 1; i < data.size(); i++) {
-//						//Á¶°Ç¹®4.Áßº¹ ¼øÀ§°¡ ÀÖÀ» °æ¿ì
+//						//ì¡°ê±´ë¬¸4.ì¤‘ë³µ ìˆœìœ„ê°€ ìˆì„ ê²½ìš°
 //						if (data.get(i-1).score == data.get(i).score) {
 //							data.get(i).setRank(rankCounter);
 //						}
-//						//Á¶°Ç¹®4.Áßº¹ ¼øÀ§°¡ ¾øÀ» °æ¿ì
+//						//ì¡°ê±´ë¬¸4.ì¤‘ë³µ ìˆœìœ„ê°€ ì—†ì„ ê²½ìš°
 //						else {
 //							rankCounter+=1;
 //							data.get(i).setRank(rankCounter);
